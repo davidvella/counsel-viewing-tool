@@ -1,8 +1,12 @@
 import React from "react";
 import MaterialTable from "material-table";
 
+export interface CounselTableProps {
+    onRowClick?: (event?: React.MouseEvent, rowData?: any, toggleDetailPanel?: (panelIndex?: number) => void) => void;
+    onRowSelected?: (rowData: any) => void;
+}
 
-export class TestTable extends React.Component<any, any> {
+export class CounselTable extends React.Component<CounselTableProps, any> {
     public render() {
         return (
             <div>
@@ -25,6 +29,8 @@ export class TestTable extends React.Component<any, any> {
                         { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 }
                     ]}
                     title="Demo Title"
+                    onRowClick={this.props.onRowClick}
+                    onRowSelected={this.props.onRowSelected}
                 />
             </div>
         );

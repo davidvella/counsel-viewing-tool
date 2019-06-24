@@ -43,7 +43,7 @@ export const TextDivider = withStyles(styles)(
 
       return (
         <div className={classes.container}>
-          <Typography variant="subtitle1" className={classes.label}>
+          <Typography variant="body2" className={classes.label}>
             {
               this.props.label
             }
