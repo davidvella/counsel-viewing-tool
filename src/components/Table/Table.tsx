@@ -26,11 +26,36 @@ export class CounselTable extends React.Component<CounselTableProps, any> {
                         }
                     ]}
                     data={[
+                        { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
+                        { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
+                        { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
+                        { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
+                        { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
+                        { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
+                        { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
+                        { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
+                        { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
+                        { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
+                        { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
+                        { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
+                        { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
+                        { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
+                        { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
                         { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 }
                     ]}
                     title="Demo Title"
                     onRowClick={this.props.onRowClick}
                     onRowSelected={this.props.onRowSelected}
+                    options={{
+                        search: false,
+                        headerStyle: {
+                            fill:"rgba(0,0,0,.54)",
+                            fontSize: '13px',
+                            textAlign:'left',
+                            fontWeight:'bold'
+                          },
+                        
+                      }}
                 />
             </div>
         );

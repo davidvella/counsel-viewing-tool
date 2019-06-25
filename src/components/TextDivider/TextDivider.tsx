@@ -1,7 +1,11 @@
-import { Typography, withStyles, createStyles, Theme, WithStyles, Divider } from '@material-ui/core';
+import withStyles from '@material-ui/core/styles/withStyles';
+import createStyles from '@material-ui/core/styles/createStyles';
+import Typography from '@material-ui/core/Typography';
 import React from "react";
+import { WithStyles } from '@material-ui/styles/withStyles';
+import Divider from '@material-ui/core/Divider';
 
-const styles = (theme: Theme) => createStyles({
+const styles = (theme: any) => createStyles({
   container: {
     height: "40px",
     "line-height": "40px"
