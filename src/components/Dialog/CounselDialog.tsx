@@ -205,6 +205,7 @@ export default function CounselDialog(props: ICounselDialogProps) {
                                     color="default"
                                     inputProps={{ 'aria-label': 'checkbox with default color' }}
                                 />
+                                <TextDivider label="Actions & Comments" />
                             </div>
                         </div>
 

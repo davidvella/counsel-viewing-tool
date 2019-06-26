@@ -9,8 +9,12 @@ import CounselDialog from './components/Dialog/CounselDialog';
 import BubbleChart from '@material-ui/icons/BubbleChart';
 import Drawer from '@material-ui/core/Drawer';
 import Grid from '@material-ui/core/Grid';
-import SearchBar from 'material-ui-search-bar'
-
+import { SearchBar } from './components/SearchBar/SearchBar';
+import TreeNode from './components/TreeNode/TreeNode';
+import TreeView from './components/TreeView/TreeView';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import FolderIcon from '@material-ui/icons/Folder';
 const drawerWidth = 256;
 
 const useStyles = makeStyles((theme: any) =>
@@ -38,7 +42,7 @@ const useStyles = makeStyles((theme: any) =>
     },
     drawerPaper: {
       width: drawerWidth,
-      borderRight:'0px'
+      borderRight: '0px'
     },
     toolbar: theme.mixins.toolbar,
     content: {
@@ -93,6 +97,25 @@ export default function App() {
         anchor="left"
       >
         <div className={classes.toolbar} />
+        <TreeView defaultCollapseIcon={<ExpandMoreIcon />} defaultExpandIcon={<ChevronRightIcon />} defaultParentIcon={<FolderIcon />}>
+          <TreeNode nodeId="1" label="Case 1">
+            <TreeNode nodeId="2" label="Revelation: Case 1">
+              <TreeNode nodeId="3" label="Container 1" />
+            </TreeNode>
+            <TreeNode nodeId="4" label="Disclosure: Case 1">
+              <TreeNode nodeId="5" label="Container 2"/>
+            </TreeNode>
+          </TreeNode>
+          <TreeNode nodeId="6" label="Case 2">
+            <TreeNode nodeId="7" label="Revelation: Case 2">
+              <TreeNode nodeId="8" label="Container 1" />
+            </TreeNode>
+            <TreeNode nodeId="9" label="Disclosure: Case 2">
+              <TreeNode nodeId="10" label="Container 2" />
+            </TreeNode>
+          </TreeNode>
+        </TreeView>
+
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />

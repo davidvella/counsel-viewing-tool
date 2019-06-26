@@ -54,7 +54,7 @@ export class CounselTable extends React.Component<CounselTableProps, any> {
                             textAlign:'left',
                             fontWeight:'bold'
                           },
-                        
+                        toolbar: false
                       }}
                 />
             </div>
