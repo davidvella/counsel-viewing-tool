@@ -10,12 +10,51 @@ import BubbleChart from '@material-ui/icons/BubbleChart';
 import Drawer from '@material-ui/core/Drawer';
 import Grid from '@material-ui/core/Grid';
 import { SearchBar } from './components/SearchBar/SearchBar';
-import TreeNode from './components/TreeNode/TreeNode';
-import TreeView from './components/TreeView/TreeView';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import { Button } from '@material-ui/core';
 import FolderIcon from '@material-ui/icons/Folder';
+import { MuiTreeView } from './components/MuiTreeView/MuiTreeView';
 const drawerWidth = 256;
+
+const tree = [
+  {
+    value: 'Parent A',
+    nodes: [{ value: 'Child A', id: "2" }, { value: 'Child B', id: "3" }],
+    id: "1"
+  },
+  {
+    value: 'Parent B',
+    id: "4",
+    nodes: [
+      {
+        id: "5",
+        value: 'Child C',
+      },
+      {
+        id: "6",
+        value: 'Parent C',
+        nodes: [
+          { value: 'Child D', id: "7" },
+          { value: 'Child E', id: "8" },
+          { value: 'Child F', id: "9" , nodes: [
+            {
+              id: "10",
+              value: 'Child C',
+              nodes:[
+                {
+                  id: "11",
+                  value: 'Child C',
+                }
+              ]
+            }
+          ]},
+        ],
+      },
+    ],
+  },
+];
+
 
 const useStyles = makeStyles((theme: any) =>
   createStyles({
@@ -27,6 +66,12 @@ const useStyles = makeStyles((theme: any) =>
       backgroundColor: theme.palette.background.paper,
       color: theme.palette.text.primary,
       zIndex: theme.zIndex.drawer + 1
+    },
+    listToolBar: {
+      backgroundColor: theme.palette.background.paper,
+      minHeight: "48px",
+      boxShadow: 'none',
+      borderBottom: '1px solid #dadce0',
     },
     searchBar: {
       maxWidth: 720,
@@ -97,28 +142,19 @@ export default function App() {
         anchor="left"
       >
         <div className={classes.toolbar} />
-        <TreeView defaultCollapseIcon={<ExpandMoreIcon />} defaultExpandIcon={<ChevronRightIcon />} defaultParentIcon={<FolderIcon />}>
-          <TreeNode nodeId="1" label="Case 1">
-            <TreeNode nodeId="2" label="Revelation: Case 1">
-              <TreeNode nodeId="3" label="Container 1" />
-            </TreeNode>
-            <TreeNode nodeId="4" label="Disclosure: Case 1">
-              <TreeNode nodeId="5" label="Container 2"/>
-            </TreeNode>
-          </TreeNode>
-          <TreeNode nodeId="6" label="Case 2">
-            <TreeNode nodeId="7" label="Revelation: Case 2">
-              <TreeNode nodeId="8" label="Container 1" />
-            </TreeNode>
-            <TreeNode nodeId="9" label="Disclosure: Case 2">
-              <TreeNode nodeId="10" label="Container 2" />
-            </TreeNode>
-          </TreeNode>
-        </TreeView>
+        <MuiTreeView
+          tree={tree}
+          defaultCollapseIcon={<ExpandMoreIcon />}
+          defaultExpandIcon={<ChevronRightIcon />} 
+          defaultParentIcon={<FolderIcon />}          
+          onLeafClick={(event)=> {global.console.log(event)} }/>
 
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
+        <Toolbar className={classes.listToolBar} >
+          <Button color="inherit">Login</Button>
+        </Toolbar>
         <CounselTable onRowClick={(event, object) => {
           handleDialogOpen();
         }}>
