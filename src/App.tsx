@@ -14,7 +14,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { Button } from '@material-ui/core';
 import FolderIcon from '@material-ui/icons/Folder';
-import { MuiTreeView } from './components/MuiTreeView/MuiTreeView';
+import MuiTreeView  from './components/MuiTreeView/MuiTreeView';
 const drawerWidth = 256;
 
 const tree = [
@@ -147,7 +147,7 @@ export default function App() {
           defaultCollapseIcon={<ExpandMoreIcon />}
           defaultExpandIcon={<ChevronRightIcon />} 
           defaultParentIcon={<FolderIcon />}          
-          onLeafClick={(event)=> {global.console.log(event)} }/>
+          onLeafClick={(event: any)=> {global.console.log(event)} }/>
 
       </Drawer>
       <main className={classes.content}>

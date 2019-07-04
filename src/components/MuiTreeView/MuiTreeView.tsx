@@ -7,7 +7,7 @@ import memoize from 'fast-memoize';
 /**
  * A React tree view for material-ui.
  */
-export class MuiTreeView extends React.Component<MuiTreeViewProps, any> {
+export default class MuiTreeView extends React.Component<MuiTreeViewProps, any> {
 
     createMemoizeTree = memoize(
         (tree) => (tree),

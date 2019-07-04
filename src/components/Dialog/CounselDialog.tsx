@@ -116,13 +116,19 @@ export default function CounselDialog(props: ICounselDialogProps) {
         setState({ ...state, [name]: event.target.checked });
     };
 
+    const handleClose = () => {
+        if(props.handleClose){
+            props.handleClose();
+        }
+    }
+
     return (
         <div>
             <MuiThemeProvider theme={darkTheme}>
                 <Dialog fullScreen open={props.showDialog} >
                     <AppBar className={classes.appBar}>
                         <Toolbar>
-                            <IconButton onClick={props.handleClose} aria-label="Hide Details">
+                            <IconButton onClick={handleClose} aria-label="Hide Details">
                                 <ArrowBack />
                             </IconButton>
                         </Toolbar>

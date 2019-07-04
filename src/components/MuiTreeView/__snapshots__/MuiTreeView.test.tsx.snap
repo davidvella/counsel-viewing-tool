@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MuiTreeView /> spec renders the component 1`] = `
+<ul
+  class="ForwardRef(TreeView)-root-1"
+  role="tree"
+>
+  <li
+    aria-expanded="false"
+    class="ForwardRef(TreeNode)-root-2"
+    role="treeitem"
+    tabindex="0"
+  >
+    <div
+      class="ForwardRef(TreeNode)-content-4"
+    >
+      <p
+        class="MuiTypography-root ForwardRef(TreeNode)-label-6 MuiTypography-body1"
+      >
+        Parent A
+      </p>
+    </div>
+    <ul
+      class="MuiCollapse-container ForwardRef(TreeNode)-group-3 MuiCollapse-hidden"
+      role="group"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner"
+        >
+          <li
+            class="ForwardRef(TreeNode)-root-2"
+            role="treeitem"
+            tabindex="-1"
+          >
+            <div
+              class="ForwardRef(TreeNode)-content-4"
+            >
+              <p
+                class="MuiTypography-root ForwardRef(TreeNode)-label-6 MuiTypography-body1"
+              >
+                Child A
+              </p>
+            </div>
+          </li>
+          <li
+            class="ForwardRef(TreeNode)-root-2"
+            role="treeitem"
+            tabindex="-1"
+          >
+            <div
+              class="ForwardRef(TreeNode)-content-4"
+            >
+              <p
+                class="MuiTypography-root ForwardRef(TreeNode)-label-6 MuiTypography-body1"
+              >
+                Child B
+              </p>
+            </div>
+          </li>
+        </div>
+      </div>
+    </ul>
+  </li>
+  <li
+    aria-expanded="false"
+    class="ForwardRef(TreeNode)-root-2"
+    role="treeitem"
+    tabindex="-1"
+  >
+    <div
+      class="ForwardRef(TreeNode)-content-4"
+    >
+      <p
+        class="MuiTypography-root ForwardRef(TreeNode)-label-6 MuiTypography-body1"
+      >
+        Parent B
+      </p>
+    </div>
+    <ul
+      class="MuiCollapse-container ForwardRef(TreeNode)-group-3 MuiCollapse-hidden"
+      role="group"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner"
+        >
+          <li
+            class="ForwardRef(TreeNode)-root-2"
+            role="treeitem"
+            tabindex="-1"
+          >
+            <div
+              class="ForwardRef(TreeNode)-content-4"
+            >
+              <p
+                class="MuiTypography-root ForwardRef(TreeNode)-label-6 MuiTypography-body1"
+              >
+                Child C
+              </p>
+            </div>
+          </li>
+          <li
+            aria-expanded="false"
+            class="ForwardRef(TreeNode)-root-2"
+            role="treeitem"
+            tabindex="-1"
+          >
+            <div
+              class="ForwardRef(TreeNode)-content-4"
+            >
+              <p
+                class="MuiTypography-root ForwardRef(TreeNode)-label-6 MuiTypography-body1"
+              >
+                Parent C
+              </p>
+            </div>
+            <ul
+              class="MuiCollapse-container ForwardRef(TreeNode)-group-3 MuiCollapse-hidden"
+              role="group"
+              style="min-height: 0px;"
+            >
+              <div
+                class="MuiCollapse-wrapper"
+              >
+                <div
+                  class="MuiCollapse-wrapperInner"
+                >
+                  <li
+                    class="ForwardRef(TreeNode)-root-2"
+                    role="treeitem"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="ForwardRef(TreeNode)-content-4"
+                    >
+                      <p
+                        class="MuiTypography-root ForwardRef(TreeNode)-label-6 MuiTypography-body1"
+                      >
+                        Child D
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    class="ForwardRef(TreeNode)-root-2"
+                    role="treeitem"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="ForwardRef(TreeNode)-content-4"
+                    >
+                      <p
+                        class="MuiTypography-root ForwardRef(TreeNode)-label-6 MuiTypography-body1"
+                      >
+                        Child E
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    aria-expanded="false"
+                    class="ForwardRef(TreeNode)-root-2"
+                    role="treeitem"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="ForwardRef(TreeNode)-content-4"
+                    >
+                      <p
+                        class="MuiTypography-root ForwardRef(TreeNode)-label-6 MuiTypography-body1"
+                      >
+                        Child F
+                      </p>
+                    </div>
+                    <ul
+                      class="MuiCollapse-container ForwardRef(TreeNode)-group-3 MuiCollapse-hidden"
+                      role="group"
+                      style="min-height: 0px;"
+                    >
+                      <div
+                        class="MuiCollapse-wrapper"
+                      >
+                        <div
+                          class="MuiCollapse-wrapperInner"
+                        >
+                          <li
+                            aria-expanded="false"
+                            class="ForwardRef(TreeNode)-root-2"
+                            role="treeitem"
+                            tabindex="-1"
+                          >
+                            <div
+                              class="ForwardRef(TreeNode)-content-4"
+                            >
+                              <p
+                                class="MuiTypography-root ForwardRef(TreeNode)-label-6 MuiTypography-body1"
+                              >
+                                Child C
+                              </p>
+                            </div>
+                            <ul
+                              class="MuiCollapse-container ForwardRef(TreeNode)-group-3 MuiCollapse-hidden"
+                              role="group"
+                              style="min-height: 0px;"
+                            >
+                              <div
+                                class="MuiCollapse-wrapper"
+                              >
+                                <div
+                                  class="MuiCollapse-wrapperInner"
+                                >
+                                  <li
+                                    class="ForwardRef(TreeNode)-root-2"
+                                    role="treeitem"
+                                    tabindex="-1"
+                                  >
+                                    <div
+                                      class="ForwardRef(TreeNode)-content-4"
+                                    >
+                                      <p
+                                        class="MuiTypography-root ForwardRef(TreeNode)-label-6 MuiTypography-body1"
+                                      >
+                                        Child C
+                                      </p>
+                                    </div>
+                                  </li>
+                                </div>
+                              </div>
+                            </ul>
+                          </li>
+                        </div>
+                      </div>
+                    </ul>
+                  </li>
+                </div>
+              </div>
+            </ul>
+          </li>
+        </div>
+      </div>
+    </ul>
+  </li>
+</ul>
+`;

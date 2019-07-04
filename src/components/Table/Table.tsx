@@ -7,6 +7,19 @@ export interface CounselTableProps {
 }
 
 export class CounselTable extends React.Component<CounselTableProps, any> {
+
+    handleRowClick = (event?: React.MouseEvent, rowData?: any, toggleDetailPanel?: (panelIndex?: number) => void) => {
+        if (this.props.onRowClick) {
+            this.props.onRowClick(event,rowData,toggleDetailPanel);
+        }
+    };
+
+    handleRowSelected = (rowData: any) => {
+        if(this.props.onRowSelected){
+            this.props.onRowSelected(rowData);
+        }
+    }
+
     public render() {
         return (
             <div>
@@ -44,8 +57,8 @@ export class CounselTable extends React.Component<CounselTableProps, any> {
                         { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 }
                     ]}
                     title="Demo Title"
-                    onRowClick={this.props.onRowClick}
-                    onRowSelected={this.props.onRowSelected}
+                    onRowClick={this.handleRowClick}
+                    onRowSelected={this.handleRowSelected}
                     options={{
                         search: false,
                         headerStyle: {
