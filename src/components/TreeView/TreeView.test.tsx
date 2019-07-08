@@ -6,7 +6,7 @@ import {
   waitForElement
 } from "@testing-library/react";
 // this adds custom jest matchers from jest-dom
-import "jest-dom/extend-expect";
+import "@testing-library/jest-dom/extend-expect";
 import TreeNode from '../TreeNode/TreeNode';
 import TreeView from './TreeView';
 

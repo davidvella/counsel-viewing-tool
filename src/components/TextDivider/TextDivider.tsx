@@ -1,9 +1,10 @@
 import withStyles from '@material-ui/core/styles/withStyles';
-import createStyles from '@material-ui/core/styles/createStyles';
+import createStyles from '@material-ui/styles/createStyles';
 import Typography from '@material-ui/core/Typography';
 import React from "react";
 import { WithStyles } from '@material-ui/styles/withStyles';
 import Divider from '@material-ui/core/Divider';
+
 
 const styles = (theme: any) => createStyles({
   container: {
