@@ -19,6 +19,7 @@ import TableBody from '@material-ui/core/TableBody';
 import ArrowBack from '@material-ui/icons/ArrowBack';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
+import {MaterialAvatar} from '../MaterialAvatar/MaterialAvatar'
 
 const useStyles = makeStyles((theme: any) =>
     createStyles({
@@ -180,8 +181,16 @@ export default function CounselDialog(props: ICounselDialogProps) {
                                             </TableCell>
                                         </TableRow>
                                     ))}
+                                    <TableRow key={"userName"}>
+                                            <TableCell component="th" scope="row" >
+                                                <MaterialAvatar Name="David Vella" />
+                                            </TableCell>
+                                            <TableCell align="right">
+                                            </TableCell>
+                                        </TableRow>
                                 </TableBody>
                             </Table>
+
                             <TextDivider label="Flags" />
                             <div>
                                 <Switch
