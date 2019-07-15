@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text Divider /> renders the component 1`] = `
+<div
+  class="Component-container-1"
+>
+  <p
+    class="MuiTypography-root Component-label-2 MuiTypography-body2"
+  >
+    Flags
+  </p>
+  <div
+    class="Component-divider-3"
+  >
+    <hr
+      class="MuiDivider-root"
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MaterialAvatar /> renders the component 1`] = `
+<div>
+  <div
+    class="Component-avatar-1"
+  >
+    <div
+      class="MuiAvatar-root Component-avatar-1 MuiAvatar-colorDefault"
+    >
+      Te
+    </div>
+  </div>
+  <p
+    class="MuiTypography-root Component-text-2 MuiTypography-body1 MuiTypography-colorTextPrimary"
+  >
+    Test
+  </p>
+</div>
+`;

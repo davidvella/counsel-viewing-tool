@@ -3,7 +3,6 @@ import {
   render,
   cleanup,
   fireEvent,
-  waitForElement
 } from "@testing-library/react";
 // this adds custom jest matchers from jest-dom
 import "@testing-library/jest-dom/extend-expect";

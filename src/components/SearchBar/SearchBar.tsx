@@ -36,7 +36,10 @@ const styles = {
         transition: 'opacity 200ms cubic-bezier(0.4, 0.0, 0.2, 1)'
     },
     input: {
-        width: '100%'
+        width: '100%',
+        "input[type=textbox]::-ms-clear" : "display: none",
+        "input[type=textbox]::-ms-reveal": "display: none;",
+        "input[type=textbox]::-webkit-search-results-decoration": "display: none;"
     },
     searchContainer: {
         margin: 'auto 16px',
