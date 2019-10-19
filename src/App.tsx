@@ -12,11 +12,13 @@ import Grid from '@material-ui/core/Grid';
 import { SearchBar } from './components/SearchBar/SearchBar';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import { Button } from '@material-ui/core';
 import FolderIcon from '@material-ui/icons/Folder';
-import MuiTreeView  from './components/MuiTreeView/MuiTreeView';
-const drawerWidth = 256;
+import MuiTreeView from './components/MuiTreeView/MuiTreeView';
+import { Menu } from 'semantic-ui-react'
+import './Menu.css'
+import { Fab } from '@material-ui/core';
 
+const drawerWidth = 256;
 
 const tree = [
   {
@@ -38,18 +40,20 @@ const tree = [
         nodes: [
           { value: 'Child D', id: "7" },
           { value: 'Child E', id: "8" },
-          { value: 'Child F', id: "9" , nodes: [
-            {
-              id: "10",
-              value: 'Child C',
-              nodes:[
-                {
-                  id: "11",
-                  value: 'Child C',
-                }
-              ]
-            }
-          ]},
+          {
+            value: 'Child F', id: "9", nodes: [
+              {
+                id: "10",
+                value: 'Child C',
+                nodes: [
+                  {
+                    id: "11",
+                    value: 'Child C',
+                  }
+                ]
+              }
+            ]
+          },
         ],
       },
     ],
@@ -73,6 +77,7 @@ const useStyles = makeStyles((theme: any) =>
       minHeight: "48px",
       boxShadow: 'none',
       borderBottom: '1px solid #dadce0',
+      paddingRight:12
     },
     searchBar: {
       maxWidth: 720,
@@ -146,16 +151,42 @@ export default function App() {
         <MuiTreeView
           tree={tree}
           defaultCollapseIcon={<ExpandMoreIcon />}
-          defaultExpandIcon={<ChevronRightIcon />} 
-          defaultParentIcon={<FolderIcon />}          
-          onLeafClick={(event: any)=> {global.console.log(event)} }/>
+          defaultExpandIcon={<ChevronRightIcon />}
+          defaultParentIcon={<FolderIcon />}
+          onLeafClick={(event: any) => { global.console.log(event) }} />
 
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Toolbar className={classes.listToolBar} >
-          <Button color="inherit">Login</Button>
-        </Toolbar>
+        <Menu className={classes.listToolBar}>
+          <Menu.Item
+            name='browse'
+          >
+            Browse
+        </Menu.Item>
+
+          <Menu.Item
+            name='submit'
+          >
+            <FolderIcon />
+          </Menu.Item>
+
+          <Menu.Menu position='right'>
+            <Menu.Item
+              name='signup'
+            >
+              <FolderIcon />
+            </Menu.Item>
+
+            <Menu.Item
+              name='help'
+            >
+              <Fab size="small" >
+                <FolderIcon  />
+              </Fab>
+            </Menu.Item>
+          </Menu.Menu>
+        </Menu>
         <CounselTable onRowClick={(event, object) => {
           handleDialogOpen();
         }}>
