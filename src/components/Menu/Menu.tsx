@@ -17,19 +17,41 @@ import './Menu.css'
  * @see Dropdown
  */
 class Menu extends React.Component<MenuProps, any> {
+    
+    constructor(props: any) {
+        super(props)
+        this.state = {
+            activeIndex: "0"
+        }
+    }
 
     static Header = MenuHeader
     static Item = MenuItem
     static Menu = MenuMenu
 
+    /**
+     * Safely attempt to set state for props that might be controlled by the user.
+     * Second argument is a state object that is always passed to setState.
+     * @param {object} state State that corresponds to controlled props.
+     * @param {function} [callback] Callback which is called after setState applied.
+     */
+    trySetState = (state: any, callback?: any) => {
+        const newState = Object.keys(state).reduce((acc: any, prop: any) => {
+            // ignore props defined by the parent
+            if (this.props[prop] !== undefined) return acc
+
+            acc[prop] = state[prop]
+            return acc
+        }, {})
+
+        if (Object.keys(newState).length > 0) this.setState(newState, callback)
+    }
+
     handleItemOverrides = (predefinedProps: any) => ({
         onClick: (e: any, itemProps: any) => {
             const { index } = itemProps
 
-            // set initial state
-            this.setState({
-                activeIndex: index
-            });
+            this.trySetState({ activeIndex: index })
 
             _.invoke(predefinedProps, 'onClick', e, itemProps)
             _.invoke(this.props, 'onItemClick', e, itemProps)
@@ -98,6 +120,6 @@ class Menu extends React.Component<MenuProps, any> {
     }
 }
 
-export const createMenu = createShorthandFactory(Menu, (items:any) => ({ items }))
+export const createMenu = createShorthandFactory(Menu, (items: any) => ({ items }))
 
 export default Menu
