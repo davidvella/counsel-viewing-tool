@@ -14,9 +14,13 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import FolderIcon from '@material-ui/icons/Folder';
 import MuiTreeView from './components/MuiTreeView/MuiTreeView';
-import { Menu } from 'semantic-ui-react'
-import './Menu.css'
+
 import { Fab } from '@material-ui/core';
+import Menu from './components/Menu/Menu';
+import MenuMenu from './components/MenuMenu/MenuMenu';
+import MenuItem from './components/MenuItem/MenuItem';
+
+
 
 const drawerWidth = 256;
 
@@ -159,33 +163,33 @@ export default function App() {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Menu className={classes.listToolBar}>
-          <Menu.Item
+          <MenuItem
             name='browse'
           >
             Browse
-        </Menu.Item>
+        </MenuItem>
 
-          <Menu.Item
+          <MenuItem
             name='submit'
           >
             <FolderIcon />
-          </Menu.Item>
+          </MenuItem>
 
-          <Menu.Menu position='right'>
-            <Menu.Item
+          <MenuMenu position='right'>
+            <MenuItem
               name='signup'
             >
               <FolderIcon />
-            </Menu.Item>
+            </MenuItem>
 
-            <Menu.Item
+            <MenuItem
               name='help'
             >
               <Fab size="small" >
                 <FolderIcon  />
               </Fab>
-            </Menu.Item>
-          </Menu.Menu>
+            </MenuItem>
+          </MenuMenu>
         </Menu>
         <CounselTable onRowClick={(event, object) => {
           handleDialogOpen();
